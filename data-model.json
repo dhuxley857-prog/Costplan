@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "entities": {
+    "project": ["id","name","location","projectType","designStage","gia","costPlanRevision","pricingBasis"],
+    "drawing": ["id","projectId","drawingNumber","title","discipline","revision","date","scale","fileRef","supersedes","status"],
+    "takeOffItem": ["id","drawingId","page","sourceRevision","method","geometry","description","location","quantity","unit","elementCode","confidence","aiStatus","qsStatus","reviewedBy","reviewedAt"],
+    "costPlanLine": ["id","projectId","revision","elementCode","description","quantity","unit","rate","cost","pricingBasis","takeOffItemId","assumptionId"],
+    "assumptionGap": ["id","projectId","type","discipline","description","costImpact","criticality","status","source"],
+    "revisionMovement": ["id","fromRevision","toRevision","category","description","amount","sourceDrawing","sourceTakeOff"]
+  },
+  "enums": {
+    "measurementMethod": ["AI_AREA","AI_LINEAR","AI_COUNT","MANUAL_AREA","MANUAL_LINEAR","MANUAL_COUNT","SCHEDULE","ALLOWANCE","BENCHMARK"],
+    "qsStatus": ["PENDING","ACCEPTED","AMENDED","REJECTED"],
+    "gapType": ["MISSING_INFORMATION","ASSUMPTION","ALLOWANCE","EXCLUSION"],
+    "movementCategory": ["DESIGN","QUANTITY","RATE","RISK_ALLOWANCE","OTHER"]
+  }
+}
